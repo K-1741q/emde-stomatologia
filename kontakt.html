@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt · Emde Stomatologia · Lębork</title>
+  <meta name="description" content="Umów wizytę w gabinecie Emde Stomatologia. Al. Wolności 40a, Lębork. Tel: 606 729 560. Bezpłatna konsultacja.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Strona główna</a> · Kontakt</div>
+    <h1>Umów <em>wizytę</em></h1>
+    <p>Pierwsza konsultacja zawsze bezpłatna. Zadzwoń, napisz lub wypełnij formularz — odpowiemy szybko.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid fade-in">
+      <div class="contact-info-block">
+        <div class="contact-row">
+          <span class="contact-label">Adres gabinetu</span>
+          <div class="contact-value">Al. Wolności 40a, Stary Browar 1p<br>84-300 Lębork</div>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Telefon</span>
+          <div class="contact-value"><a href="tel:606729560">606 729 560</a></div>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">E-mail</span>
+          <div class="contact-value"><a href="mailto:dr.dolinski@icloud.com">dr.dolinski@icloud.com</a></div>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Godziny przyjęć</span>
+          <div class="contact-value">
+            Poniedziałek – Piątek: 9:00 – 18:00<br>
+            Sobota: po wcześniejszym umówieniu<br>
+            Niedziela: nieczynne
+          </div>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Pierwsza wizyta</span>
+          <div class="contact-value" style="color:var(--gold); font-weight:500;">Bezpłatna konsultacja i badanie</div>
+        </div>
+        <div style="margin-top:1.5rem; display:flex; flex-direction:column; gap:0.75rem;">
+          <a href="tel:606729560" class="btn btn-gold" style="text-align:center;">Zadzwoń teraz</a>
+          <a href="mailto:dr.dolinski@icloud.com" class="btn btn-outline-dark" style="text-align:center;">Napisz e-mail</a>
+        </div>
+      </div>
+      <div class="contact-map-box">
+        <!-- Można wkleić embed z Google Maps -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2311.1!2d17.7454368!3d54.5402392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fddd01a27aed7d%3A0x2b4e22590948393a!2sMariusz%20Doli%C5%84ski%2C%20lekarz%20dentysta%2C%20Emde%20stomatologia%20IPS%20L%C4%99bork!5e0!3m2!1spl!2spl!4v1234567890"
+          style="width:100%; height:100%; min-height:320px; border:none;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULARZ -->
+<section class="section bg-cream">
+  <div class="container">
+    <div class="fade-in" style="max-width:680px; margin:0 auto;">
+      <span class="sec-label">Formularz kontaktowy</span>
+      <h2>Napisz do nas</h2>
+      <div class="gold-line"></div>
+      <p>Odpowiadamy w ciągu 24 godzin. Możesz też zadzwonić bezpośrednio: <a href="tel:606729560" style="color:var(--gold); font-weight:500;">606 729 560</a></p>
+
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Imię i nazwisko</label>
+            <input type="text" class="form-input" placeholder="Jan Kowalski" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Telefon</label>
+            <input type="tel" class="form-input" placeholder="600 000 000">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">E-mail</label>
+          <input type="email" class="form-input" placeholder="jan@example.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Temat wizyty</label>
+          <select class="form-input">
+            <option value="">Wybierz rodzaj wizyty</option>
+            <option>Bezpłatna konsultacja (pierwsza wizyta)</option>
+            <option>Leczenie zachowawcze / plomba</option>
+            <option>Protetyka (korona, most, proteza)</option>
+            <option>Chirurgia (ekstrakcja, ósemka)</option>
+            <option>Higienizacja (skaling, piaskowanie)</option>
+            <option>Stomatologia estetyczna</option>
+            <option>Inne</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Wiadomość (opcjonalnie)</label>
+          <textarea class="form-input form-textarea" placeholder="Opisz czego potrzebujesz lub kiedy możesz przyjść..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Wyślij wiadomość</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- DOJAZD -->
+<section class="section">
+  <div class="container">
+    <div class="fade-in">
+      <span class="sec-label">Dojazd</span>
+      <h2>Jak do nas trafić</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:2rem;" class="fade-in">
+      <div style="background:var(--cream); padding:2rem; border-top:2px solid var(--gold);">
+        <h3 style="font-size:1rem; margin-bottom:0.75rem;">Samochodem</h3>
+        <p>Centrum Lęborka, al. Wolności 40a. Budynek Starego Browaru, wejście od ul. Wolności. Parking w okolicy budynku.</p>
+      </div>
+      <div style="background:var(--cream); padding:2rem; border-top:2px solid var(--gold);">
+        <h3 style="font-size:1rem; margin-bottom:0.75rem;">Autobusem</h3>
+        <p>Przystanek „Lębork Centrum" lub „Stary Browar" — linie miejskie. Odległość pieszo ok. 2–3 minuty.</p>
+      </div>
+      <div style="background:var(--cream); padding:2rem; border-top:2px solid var(--gold);">
+        <h3 style="font-size:1rem; margin-bottom:0.75rem;">Pieszo</h3>
+        <p>5 minut od dworca PKP w Lęborku. Budynek wyróżniający się historyczną architekturą przy głównej alei.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.form-submit');
+  btn.textContent = 'Wysłano! Odezwiemy się wkrótce.';
+  btn.style.background = 'var(--gold)';
+  btn.style.color = 'var(--navy)';
+  btn.disabled = true;
+}
+</script>
+</body>
+</html>

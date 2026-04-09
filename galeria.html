@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria · Emde Stomatologia · Lębork</title>
+  <meta name="description" content="Galeria zdjęć gabinetu i efektów leczenia. Przed i po. Emde Stomatologia, dr Mariusz Doliński, Lębork.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .gallery-tabs { display: flex; gap: 0; margin-bottom: 0; border-bottom: 0.5px solid #e0dbd3; }
+    .gallery-tab { padding: 1rem 2rem; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gray); cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.2s; background: none; border-top: none; border-left: none; border-right: none; font-family: var(--sans); }
+    .gallery-tab.active, .gallery-tab:hover { color: var(--navy); border-bottom-color: var(--gold); }
+    .gallery-section-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; color: var(--navy); margin: 2.5rem 0 1.5rem; padding-bottom: 0.75rem; border-bottom: 0.5px solid var(--cream2); }
+    .before-after-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 2.5rem; }
+    .ba-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+    .ba-img { background: var(--navy2); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .ba-img img { width: 100%; height: 100%; object-fit: cover; }
+    .ba-label { position: absolute; bottom: 0; left: 0; right: 0; padding: 6px 10px; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; }
+    .ba-label.before { background: rgba(7,17,31,0.7); color: rgba(255,255,255,0.5); }
+    .ba-label.after { background: rgba(201,169,110,0.85); color: var(--navy); font-weight: 500; }
+    .ba-placeholder { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+    .ba-placeholder svg { width: 28px; height: 28px; stroke: rgba(201,169,110,0.2); fill: none; }
+    .ba-placeholder span { font-size: 9px; color: rgba(255,255,255,0.15); letter-spacing: 1px; text-transform: uppercase; }
+    .gabinet-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--cream2); }
+    .gabinet-item { background: var(--navy2); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; overflow: hidden; cursor: pointer; position: relative; }
+    .gabinet-item:hover .gallery-overlay { opacity: 1; }
+    .gabinet-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .gabinet-item:hover img { transform: scale(1.04); }
+  </style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Strona główna</a> · Galeria</div>
+    <h1>Galeria</h1>
+    <p>Efekty naszej pracy, gabinet i atmosfera w której dbamy o Twoje zęby.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="gallery-tabs fade-in">
+      <button class="gallery-tab active">Przed i po</button>
+      <button class="gallery-tab">Gabinet</button>
+      <button class="gallery-tab">Zespół</button>
+    </div>
+
+    <!-- PRZED / PO -->
+    <div id="tab-przed-po">
+      <div class="gallery-section-title fade-in">Leczenie zachowawcze i nano-wypełnienia</div>
+      <div class="before-after-grid fade-in">
+        <div class="ba-pair">
+          <div class="ba-img"><div class="ba-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Przed</span></div><div class="ba-label before">Przed</div></div>
+          <div class="ba-img"><div class="ba-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Po</span></div><div class="ba-label after">Po</div></div>
+        </div>
+        <div class="ba-pair">
+          <div class="ba-img"><div class="ba-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Przed</span></div><div class="ba-label before">Przed</div></div>
+          <div class="ba-img"><div class="ba-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Po</span></div><div class="ba-label after">Po</div></div>
+        </div>
+      </div>
+
+      <div class="gallery-section-title fade-in">Protetyka i korony</div>
+      <div class="before-after-grid fade-in">
+        <div class="ba-pair">
+          <div class="ba-img"><div class="ba-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Przed</span></div><div class="ba-label before">Przed</div></div>
+          <div class="ba-img"><div class="ba-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Po</span></div><div class="ba-label after">Po</div></div>
+        </div>
+        <div class="ba-pair">
+          <div class="ba-img"><div class="ba-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Przed</span></div><div class="ba-label before">Przed</div></div>
+          <div class="ba-img"><div class="ba-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Po</span></div><div class="ba-label after">Po</div></div>
+        </div>
+      </div>
+
+      <div class="gallery-section-title fade-in">Stomatologia estetyczna</div>
+      <div class="before-after-grid fade-in">
+        <div class="ba-pair">
+          <div class="ba-img"><div class="ba-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Przed</span></div><div class="ba-label before">Przed</div></div>
+          <div class="ba-img"><div class="ba-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Po</span></div><div class="ba-label after">Po</div></div>
+        </div>
+        <div class="ba-pair">
+          <div class="ba-img"><div class="ba-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Przed</span></div><div class="ba-label before">Przed</div></div>
+          <div class="ba-img"><div class="ba-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Po</span></div><div class="ba-label after">Po</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GABINET -->
+    <div class="gallery-section-title fade-in" style="margin-top:1rem;">Gabinet · Al. Wolności 40a, Lębork</div>
+    <div class="gabinet-grid fade-in">
+      <div class="gabinet-item"><div class="ba-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Zdjęcie gabinetu</span></div><div class="gallery-overlay"><span>Poczekania</span></div></div>
+      <div class="gabinet-item"><div class="ba-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Zdjęcie gabinetu</span></div><div class="gallery-overlay"><span>Fotel i sprzęt</span></div></div>
+      <div class="gabinet-item"><div class="ba-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Zdjęcie gabinetu</span></div><div class="gallery-overlay"><span>SleeperOne</span></div></div>
+      <div class="gabinet-item"><div class="ba-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Zdjęcie gabinetu</span></div><div class="gallery-overlay"><span>Sterylizacja</span></div></div>
+      <div class="gabinet-item"><div class="ba-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Zdjęcie gabinetu</span></div><div class="gallery-overlay"><span>Materiały</span></div></div>
+      <div class="gabinet-item"><div class="ba-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Zdjęcie gabinetu</span></div><div class="gallery-overlay"><span>Widok z zewnątrz</span></div></div>
+    </div>
+
+    <div style="background:var(--cream); padding:2rem; text-align:center; margin-top:3rem;" class="fade-in">
+      <p style="font-size:13px; color:var(--gray); margin-bottom:1rem;">Zdjęcia przed i po zostaną uzupełnione przez właściciela gabinetu. Wszystkie zdjęcia są publikowane za zgodą pacjentów.</p>
+      <a href="kontakt.html" class="btn btn-navy">Umów wizytę</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
+<script>
+  document.querySelectorAll('.gallery-tab').forEach((tab, i) => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.gallery-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
