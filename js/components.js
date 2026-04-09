@@ -1,4 +1,3 @@
-// Shared navigation
 const NAV_HTML = `
 <nav class="nav">
   <div class="nav-inner">
@@ -6,6 +5,7 @@ const NAV_HTML = `
     <div class="nav-links">
       <a href="index.html">Strona główna</a>
       <a href="o-nas.html">O nas</a>
+      <a href="zespol.html">Zespół</a>
       <a href="uslugi.html">Usługi</a>
       <a href="galeria.html">Galeria</a>
       <a href="cennik.html">Cennik</a>
@@ -37,6 +37,7 @@ const FOOTER_HTML = `
       <h4>Gabinet</h4>
       <ul>
         <li><a href="o-nas.html">O lekarzu</a></li>
+        <li><a href="zespol.html">Zespół</a></li>
         <li><a href="galeria.html">Galeria</a></li>
         <li><a href="cennik.html">Cennik</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
@@ -54,13 +55,13 @@ const FOOTER_HTML = `
   </div>
   <div class="footer-bottom">
     <span class="footer-copy">© 2025 Emde Stomatologia · Dr Mariusz Doliński · Lębork</span>
-    <span class="footer-copy">Projekt strony: [Twoje imię]</span>
+    <span class="footer-copy">Projekt: [Twoje imię]</span>
   </div>
 </footer>`;
 
 document.addEventListener('DOMContentLoaded', () => {
-  const navPlaceholder = document.getElementById('nav-placeholder');
-  const footerPlaceholder = document.getElementById('footer-placeholder');
-  if (navPlaceholder) navPlaceholder.outerHTML = NAV_HTML;
-  if (footerPlaceholder) footerPlaceholder.outerHTML = FOOTER_HTML;
+  const nav = document.getElementById('nav-placeholder');
+  const footer = document.getElementById('footer-placeholder');
+  if (nav) nav.outerHTML = NAV_HTML;
+  if (footer) footer.outerHTML = FOOTER_HTML;
 });
